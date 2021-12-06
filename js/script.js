@@ -3,13 +3,13 @@ $(document).ready(function () {
 
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
-    grabCursor: true,
+    grabCursor: false,
     centeredSlides: true,
     slidesPerView: "auto",
     coverflowEffect: {
-      rotate: 5,
+      rotate: 15,
       stretch: 0,
-      depth: 100,
+      depth: 150,
       modifier: 2,
       slideShadows: true,
     },
@@ -23,6 +23,7 @@ $(document).ready(function () {
     },
   });
 
+  // text-box-slider
   $(".owl-carousel").owlCarousel({
     items: 1,
     loop: true,
@@ -108,22 +109,40 @@ $(document).ready(function () {
       body.classList.remove("sticky");
     }
   }
+  //   mobile-menu
+  function MobileMenu() {
+    let menuIcon = document.querySelector(".hamburger");
+    let body = document.querySelector("body");
+    let overlay = document.querySelector(".overlay");
+    menuIcon.addEventListener("click", function () {
+      body.classList.toggle("active");
+    });
+    overlay.addEventListener("click", function () {
+      body.classList.remove("active");
+    });
+    $(".mobile-menu ul li").click(() => {
+      body.classList.remove("active");
+    });
+  }
+
+  MobileMenu();
 
   // latest-things-slider
   $(".latest").slick({
-    dots: false,
+    lazyLoad: "ondemand",
+    dots: true,
     arrows: true,
     prevArrow:
       '<button class="slide-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>',
     nextArrow:
       '<button class="slide-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>',
     infinite: true,
-    speed: 300,
-    slidesToShow: 4,
+    speed: 500,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
-    pauseOnHover: false,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -134,7 +153,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 769,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -148,5 +167,13 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+  $("#button-submit").click(function () {
+    swal({
+      title: "Thank You",
+      text: "Your Message Is Received",
+      icon: "success",
+      button: "Ok",
+    });
   });
 });
