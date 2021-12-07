@@ -258,6 +258,8 @@ header .mobile-menu {
   flex-direction: column;
   transform: translateX(100%);
   transition: 0.4s ease-in;
+  visibility: hidden;
+  opacity: 0;
 }
 header .mobile-menu .social-icons {
   display: flex;
@@ -272,6 +274,8 @@ header .mobile-menu .social-icons li a {
 }
 .active header .mobile-menu {
   transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
 header .mobile-menu li {
   margin-bottom: 40px;
@@ -1383,6 +1387,9 @@ footer .copy-text p {
   }
 }
 @media all and (max-width: 980px) {
+  header .mobile-menu li a {
+    font-size: 20px;
+  }
   header .hamburger {
     display: block;
   }
@@ -1659,8 +1666,23 @@ footer .copy-text p {
     font-size: 14px;
   }
   #leaders .persons li {
-    width: 60%;
+    width: 45%;
     margin-right: 0;
+    height: 230px;
+  }
+  #leaders .persons li:nth-child(2n) {
+    margin-left: 24px;
+  }
+  #leaders .persons li .info {
+    height: 80px;
+    padding: 10px 10px;
+  }
+  #leaders li .info h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  #leaders li .info span {
+    font-size: 12px;
   }
   #news .heading {
     margin-bottom: 24px;
@@ -1673,12 +1695,35 @@ footer .copy-text p {
   }
   #news .notice-item span {
     font-size: 13px;
+    margin-bottom: 0;
+  }
+  #news .notice-item p {
+    font-size: 14px;
+    margin-top: 6px;
   }
   #news .circle {
     right: 62%;
   }
+  .prev-arrow {
+    left: -15px;
+  }
+  #news .latest .item-box {
+    margin-right: 0;
+  }
+  #courses .head h1 {
+    font-size: 24px;
+  }
   #courses .items li {
     width: 100%;
+  }
+  #courses .items li h1 {
+    font-size: 22px;
+  }
+  #courses .items li p {
+    font-size: 14px;
+  }
+  #facilities .head h3 {
+    font-size: 24px;
   }
   #facilities .item {
     width: 100%;
