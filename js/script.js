@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  alert("Are You Ready For Launching!!");
   new WOW().init();
 
   var swiper = new Swiper(".swiper", {
@@ -124,8 +125,19 @@ $(document).ready(function () {
       body.classList.remove("active");
     });
   }
-
   MobileMenu();
+
+  //   activating-main-header-elements
+  $("header .menu li").click(function () {
+    $("header .menu li.active").removeClass("active");
+    $(this).addClass("active");
+  });
+
+  //   activating-elements-mobile-menu
+  $(".mobile-menu ul li").click(function () {
+    $("header .mobile-menu li.active").removeClass("active");
+    $(this).addClass("active");
+  });
 
   // latest-things-slider
   $(".latest").slick({
