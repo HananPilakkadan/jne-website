@@ -393,7 +393,7 @@ main .enroll ul {
 main .enroll li {
   background: var(--prime-blue);
   padding: 12px 20px;
-  border-radius: 15px;
+  border-radius: 8px;
   margin-right: 24px;
   transition: 0.3s ease-in-out;
 }
@@ -477,7 +477,7 @@ main .scroll-top a:hover {
 #info-box ul {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 46px;
 }
 #info-box ul li {
   text-align: center;
@@ -599,6 +599,7 @@ main .scroll-top a:hover {
 #leaders .pricipal .quote p {
   line-height: 1.7em;
   color: var(--prime-gray);
+  text-align: justify;
 }
 #leaders .pricipal .quote small {
   font-size: 80px;
@@ -648,7 +649,7 @@ main .scroll-top a:hover {
   background-image: url(../images/Noorsha-management.jpg);
 }
 #leaders .persons .vice-chairman {
-  background-image: url(../images/tp-adbulla-koya-madani_managementl.jpg);
+  background-image: url(../images/user-icon.png);
 }
 #leaders .persons .trust-board {
   background-image: url(../images/fazalullah-anvari.jpeg);
@@ -694,8 +695,8 @@ main .scroll-top a:hover {
   border: 2px solid var(--prime-blue);
   position: absolute;
   border-radius: 50%;
-  top: 10%;
-  right: 20%;
+  top: 4%;
+  right: 14%;
   animation: circle 8s infinite;
   z-index: -1;
   opacity: 0.6;
@@ -751,6 +752,7 @@ main .scroll-top a:hover {
   margin-bottom: 60px;
 }
 #news .notice-item {
+  display: flex;
   background: linear-gradient(-45deg, #d1d1d144, #f7f8ff);
   padding: 20px 30px;
   height: 145px;
@@ -913,6 +915,7 @@ main .scroll-top a:hover {
   border-radius: 20px;
 }
 #courses .items li {
+  cursor: pointer;
   width: 30%;
   height: 200px;
   text-align: center;
@@ -1107,7 +1110,7 @@ main .scroll-top a:hover {
 #gallery .content-box .items {
   width: 25%;
   background: var(--prime-light);
-  margin: 0 24px 30px 0;
+  margin: 0 48px 30px 0;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
@@ -1266,6 +1269,11 @@ footer .top-container .logo {
   width: 100px;
   margin: 0 auto 70px;
 }
+footer .top-container .logo h1 {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
 footer .top-container .logo h1 img {
   width: 100%;
   display: block;
@@ -1283,9 +1291,7 @@ footer .address-box .contact-item {
   transition: 0.3s ease-in;
 }
 footer .address-box .location {
-  margin-right: 30px;
-}
-footer .address-box .phone {
+  padding: 0 50px;
   border-right: 1px solid #f7f8ff;
   border-left: 1px solid #f7f8ff;
 }
@@ -1364,7 +1370,7 @@ footer .social-icons {
 }
 footer .social-icons li {
   width: 30px;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 footer .social-icons li:last-child {
   margin-right: 0;
