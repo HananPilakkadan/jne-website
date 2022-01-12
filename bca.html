@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Department Of BCA</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/depart.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
@@ -14,9 +13,10 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
     <script src="./js/jquery-min.js"></script>
-    <script src="./js/wow.js"></script>
+    <script src="./js/wow.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- favicon -->
     <link rel="icon" sizes="16x16" href="./images/jamia logo.png"
@@ -30,13 +30,42 @@
         </h1>
         <ul class="menu alter">
           <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html">News</a></li>
+          <li><a href="index.html">Gallery</a></li>
+          <li><a href="index.html">Contact</a></li>
         </ul>
+
+        <!-- mobile-menu -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu">
+           <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html">News</a></li>
+            <li><a href="index.html">Courses</a></li>
+            <li><a href="index.html">Gallery</a></li>
+            <li><a href="index.html">Contact</a></li>
+           </ul>
+            <ul class="social-icons">
+                <li>
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+          </div>
       </div>
     </header>
+    <span class="overlay"></span>
     <section id="teachers">
       <div class="top">
         <h1>Department Of BCA</h1>
@@ -100,5 +129,89 @@
         </ul>
       </div>
     </section>
+    <!-- main-section-end -->
+
+    <section id="info-box">
+        <div class="wrapper">
+          <ul class="boxes">
+            <li class="wow fadeInLeft">
+              <span><i class="fas fa-user-graduate"></i></span>
+              <h3 class="students">0+</h3>
+              <p>Students</p>
+            </li>
+            <li class="wow fadeInLeft" data-wow-delay=".2s">
+              <span><i class="fas fa-chalkboard-teacher"></i></span>
+              <h3 class="teachers">40+</h3>
+              <p>Teachers</p>
+            </li>
+            <li class="wow fadeInRight" data-wow-delay=".3s">
+              <span><i class="fas fa-graduation-cap"></i></span>
+              <h3 class="courses">8+</h3>
+              <p>Courses</p>
+            </li>
+            <li class="wow fadeInRight" data-wow-delay=".4s">
+              <span><i class="fas fa-medal"></i></span>
+              <h3 class="experience">50+</h3>
+              <p>Year Of Experience</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- info-box -->
+
+    <footer id="footer">
+        <div class="wrapper">
+          <div class="top-container">
+            <div class="logo">
+              <h1>
+                <a href="#home"
+                  ><img src="./images/jamia logo.png" alt="Logo"
+                /></a>
+              </h1>
+            </div>
+            <div class="address-box">
+              <div class="location contact-item">
+                <a href="https://goo.gl/maps/UvzzwmxHhgevra1q6 ">
+                  <span><img src="./images/map-icon.png" alt="Map"></span></a>
+                 <a href="https://goo.gl/maps/UvzzwmxHhgevra1q6 "> <h4>
+                  Chempakuthu -Chalipadam-Kunduthodu Rd, Chembakuth, Edavanna,
+                  Kerala 676123
+                </h4></a>
+                </a>
+              </div>
+              <div class="phone contact-item">
+                <a href="tel:04832704771">
+                  <span><img src="./images/phone-icon.png" alt="Phone"></span></a>
+                  <a href="tel:04832704771"><h4>0483 270 4771</h4></a>
+                </a>
+              </div>
+              <div class="mail contact-item">
+                <a href="#">
+                  <span><img src="./images/mail-icon.png" alt="Mail"></span></a>
+                 <a href=""><h4>hello@jamia.com</h4></a> 
+                </a>
+              </div>
+            </div>
+          </div>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+          <div class="copy-text">
+            <p>
+              &copy; All Right Reserved | Design And Developed By BCA (2020 -
+              2023).
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer-end -->
   </body>
 </html>
