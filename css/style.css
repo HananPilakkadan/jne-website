@@ -562,6 +562,17 @@ main .scroll-top a:hover {
   border-radius: 20px;
   position: relative;
 }
+#leaders .vice {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#leaders .vice .profile {
+  margin: 0 0 0 40px;
+}
+#leaders .vice .quote small {
+  left: -82%;
+  transform: rotateY(180deg);
+}
 #leaders .pricipal .profile {
   width: 20%;
   background-size: cover;
@@ -1525,6 +1536,7 @@ footer .copy-text p {
   background-repeat: no-repeat;
   border: 1px solid var(--prime-blue);
   margin-right: 24px;
+  margin-bottom: 24px;
   padding: 50px 20px;
   transition: 0.3s ease-in;
 }
@@ -1545,6 +1557,171 @@ footer .copy-text p {
 }
 #teachers .profiles li:hover .image-box {
   border: 1px solid var(--prime-blue);
+}
+
+#spotlight {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#spotlight h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 36px;
+  color: #41447d;
+}
+
+#spotlight p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #797979;
+}
+
+/* # spotlight end */
+
+/* #sports start */
+
+#sports {
+  padding: 50px 0;
+}
+
+#sports .content h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #41447d;
+}
+
+#sports .content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #41447d;
+}
+
+#sports .content ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#sports .content ul li {
+  width: 20%;
+  margin-right: 24px;
+}
+
+#sports .content ul li:nth-child(n + 5) {
+  margin-top: 24px;
+}
+
+#sports .content ul li img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+#sports .content ul li:nth-child(4) {
+  margin-right: 0;
+}
+
+#sports .content ul li:last-child {
+  margin-right: 0;
+}
+
+#portfolio {
+  padding: 80px 0;
+}
+
+#portfolio .container {
+  background: linear-gradient(to bottom, #41447d25, #41447d),
+    url(../images/Computer5.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 190px;
+  border-radius: 12px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#portfolio .container h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #f7f8ff;
+}
+
+#portfolio .staff {
+  display: flex;
+  padding: 0 116px;
+}
+
+#portfolio .staff ul {
+  display: flex;
+}
+
+#portfolio .staff ul li {
+  background-color: #f7f8ff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#portfolio .staff ul li.box {
+  margin-right: 18px;
+}
+
+#portfolio .staff ul li .icon {
+  margin-right: 10px;
+  color: #0808da;
+}
+
+#portfolio .staff ul li h5 {
+  font-size: 16px;
+}
+
+#gallery {
+  padding: 0 0 80px 0;
+}
+
+#gallery ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f7f8ff;
+  padding: 50px 0;
+  border-radius: 8px;
+}
+
+#gallery ul li {
+  width: 20%;
+  margin-right: 24px;
+}
+
+#gallery ul li:nth-child(n + 5) {
+  margin-top: 24px;
+}
+
+#gallery ul li img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+#gallery ul li:nth-child(4) {
+  margin-right: 0;
+}
+
+#gallery ul li:last-child {
+  margin-right: 0;
 }
 /*external-pages-style-end-here  */
 
@@ -1753,6 +1930,44 @@ footer .copy-text p {
   #teachers .profiles li:nth-child(3) {
     margin-right: 20px;
   }
+  /* external */
+  #spotlight h1 {
+    font-size: 34px;
+    margin-bottom: 24px;
+  }
+  #sports .content h1 {
+    font-size: 30px;
+  }
+  #spotlight p {
+    font-size: 16px;
+  }
+  #sports .content ul li {
+    width: 30%;
+  }
+  #sports .content ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  #sports .content ul li:nth-child(n + 4) {
+    margin-top: 24px;
+  }
+  #sports .content ul li:nth-child(4) {
+    margin-right: 24px;
+  }
+  #sports .content ul li:nth-child(6) {
+    margin-right: 0;
+  }
+  #portfolio .staff {
+    padding: 0 72px;
+  }
+  #portfolio .container {
+    height: 140px;
+  }
+  #portfolio .container h1 {
+    font-size: 28px;
+  }
+  #portfolio .staff ul li h5 {
+    font-size: 14px;
+  }
 }
 
 @media all and (max-width: 640px) {
@@ -1815,6 +2030,46 @@ footer .copy-text p {
   }
   footer .copy-text p {
     line-height: 1.5em;
+  }
+  /* external */
+  #sports .content ul li {
+    width: 40%;
+  }
+  #sports .content ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  #sports .content ul li:nth-child(n + 3) {
+    margin-top: 24px;
+  }
+  #sports .content ul li:nth-child(3n) {
+    margin-right: 24px;
+  }
+  #sports .content ul li:nth-child(6) {
+    margin-right: 0;
+  }
+  #portfolio .container {
+    height: 130px;
+  }
+  #portfolio .staff {
+    padding: 0 60px;
+  }
+  #portfolio .container h1 {
+    font-size: 26px;
+  }
+  #gallery ul li {
+    width: 40%;
+  }
+  #gallery ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  #gallery ul li:nth-child(n + 3) {
+    margin-top: 24px;
+  }
+  #gallery ul li:nth-child(3n) {
+    margin-right: 24px;
+  }
+  #gallery ul li:nth-child(6) {
+    margin-right: 0;
   }
 }
 
@@ -2018,6 +2273,103 @@ footer .copy-text p {
     font-size: 14px;
   }
   footer .copy-text p {
+    font-size: 14px;
+  }
+  /* external */
+  #spotlight h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #sports {
+    padding-top: 0;
+  }
+  #sports .content h1 {
+    font-size: 26px;
+  }
+  #sports .content h2 {
+    font-size: 20px;
+  }
+  #spotlight p {
+    font-size: 14px;
+  }
+  #sports .content ul li {
+    width: 85%;
+    margin-right: 0;
+  }
+  #sports .content ul li:nth-child(n + 2) {
+    margin-top: 24px;
+  }
+  #sports .content ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  #portfolio {
+    padding: 60px 0;
+  }
+  #portfolio .container {
+    height: 120px;
+  }
+  #portfolio .container h1 {
+    font-size: 28px;
+  }
+  #portfolio .staff ul {
+    flex-direction: column;
+  }
+  #portfolio .staff ul li.box {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  #portfolio .staff .text {
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+  #portfolio .staff ul li h5 {
+    font-size: 12px;
+  }
+  #gallery {
+    padding: 0 0 60px 0;
+  }
+  #gallery ul li {
+    width: 85%;
+    margin-right: 0;
+  }
+  #gallery ul li:nth-child(n + 2) {
+    margin-top: 24px;
+  }
+  #gallery ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media all and (max-width: 360px) {
+  #spotlight h1 {
+    font-size: 24px;
+  }
+  #sports .content h1 {
+    font-size: 22px;
+  }
+  #portfolio .staff {
+    font-size: 16px;
+    padding: 0 34px;
+  }
+  #portfolio .container {
+    height: 110px;
+    width: 85%;
+  }
+  #portfolio .container h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  #spotlight h1 {
+    font-size: 22px;
+  }
+  #portfolio .container h1 {
+    font-size: 20px;
+  }
+  #portfolio .container {
+    height: 100px;
+  }
+  #portfolio .staff {
     font-size: 14px;
   }
 }
