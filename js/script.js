@@ -1,7 +1,17 @@
-$(document).ready(function () {
-  //   alert("Are You Ready For Launching!!");
-  new WOW().init();
+var loader = document.getElementById("loader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+  this.document.body.style.overflow = "visible";
+});
 
+// smooth-scrolling
+function scrollTopBtn() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+$(document).ready(function () {
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabCursor: false,
@@ -38,62 +48,6 @@ $(document).ready(function () {
     animateIn: "slideInRight",
     animateOut: "fadeOut",
   });
-
-  function std() {
-    let students = document.querySelector(".boxes li .students");
-    let counter = 0;
-    setInterval(() => {
-      if (counter == 500) {
-        clearInterval();
-      } else {
-        counter += 2;
-        students.textContent = counter + "+";
-      }
-    }, 8);
-  }
-  std();
-
-  function teach() {
-    let teachers = document.querySelector(".boxes li .teachers");
-    let counter = 0;
-    setInterval(() => {
-      if (counter == 40) {
-        clearInterval();
-      } else {
-        counter += 2;
-        teachers.textContent = counter + "+";
-      }
-    }, 150);
-  }
-  teach();
-
-  function course() {
-    let courses = document.querySelector(".boxes li .courses");
-    let counter = 0;
-    setInterval(() => {
-      if (counter == 8) {
-        clearInterval();
-      } else {
-        counter += 1;
-        courses.textContent = counter + "+";
-      }
-    }, 300);
-  }
-  course();
-
-  function expe() {
-    let experience = document.querySelector(".boxes li .experience");
-    let counter = 0;
-    setInterval(() => {
-      if (counter == 50) {
-        clearInterval();
-      } else {
-        counter += 1;
-        experience.textContent = counter + "+";
-      }
-    }, 80);
-  }
-  expe();
 
   // sticky-header
   window.onscroll = function () {
@@ -159,7 +113,7 @@ $(document).ready(function () {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -167,13 +121,15 @@ $(document).ready(function () {
       {
         breakpoint: 769,
         settings: {
+          arrows: false,
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 481,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -189,3 +145,4 @@ $(document).ready(function () {
     });
   });
 });
+AOS.init();
