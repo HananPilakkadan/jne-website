@@ -82,7 +82,6 @@ h1 {
 
 body {
     font-family: "poppinsregular";
-    overflow: hidden;
 }
 
 body.sticky {
@@ -1698,6 +1697,94 @@ main .scroll-top:hover {
 
 /* qoute-section-end */
 
+/* developers */
+#developers {
+    padding: 60px 0;
+}
+
+#developers .head {
+    text-align: center;
+    margin-bottom: 70px;
+
+}
+
+#developers .head h2 {
+    font-size: 30px;
+    color: var(--prime-blue);
+    font-weight: 600;
+}
+
+#developers ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#developers ul li {
+    width: 20%;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+#developers ul li .avatar {
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+
+}
+
+#developers ul li .avatar img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--prime-blue);
+    border-right: 1px dashed var(--prime-blue);
+}
+
+#developers ul li .info h3 {
+    color: #111;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#developers ul li .info span {
+    color: #a8a8a8;
+    font-size: 14px;
+    display: block;
+}
+
+#developers ul li .info a.button {
+    color: #fff;
+    background: #0A66C2;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 16px;
+    display: inline-block;
+    transition: .4s ease;
+}
+
+#developers ul li .info a.button:hover {
+    background: #033970;
+
+}
+
+#developers ul li .info a.button i {
+    margin-right: 8px;
+}
+
+
+
+/* footer */
 footer {
     background: linear-gradient(to top, rgba(47, 65, 168, 0.815), #41447d),
         url(../images/footerbg.jpg);
@@ -2103,7 +2190,7 @@ footer .copy-text p span {
 }
 
 #sports .content ul li:nth-child(n + 5) {
-    margin-top: 24px;
+    /* margin-top: 24px; */
 }
 
 #sports .content ul li img {
@@ -2229,6 +2316,129 @@ footer .copy-text p span {
     margin-right: 0;
 }
 
+/* form */
+#form {
+    padding-bottom: 80px;
+}
+
+#form .head {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#form .head h2 {
+    font-size: 24px;
+    color: var(--prime-blue);
+    margin-bottom: 20px;
+}
+
+#form .head h4 {
+    color: var(--prime-gray);
+}
+
+#form .container {
+    width: 50%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #d1d1d144, #f7f8ff);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-radius: 10px;
+    padding: 60px 50px;
+}
+
+#form .container form label {
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--prime-blue);
+}
+
+#form .container form input {
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    border-radius: 10px;
+    padding: 12px 20px;
+    width: 100%;
+    background: #fafafa;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+
+#form .container form input:active,
+#form .container form input:focus {
+    border: 2px solid var(--prime-blue);
+}
+
+#form .container form input[type="date"] {
+    color: #d7d7d7;
+}
+
+#form .container form select {
+    width: 100%;
+    display: block;
+    background: #fafafa;
+    padding: 16px 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+}
+
+#form .container form input::placeholder {
+    color: #d7d7d7;
+}
+
+#form .container form input[type="submit"] {
+    background-color: var(--prime-blue);
+    color: #fff;
+    margin-top: 30px;
+    background: linear-gradient(180deg, #41447d, #41447d);
+    background-size: 300% 100%;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#form .container form input[type="submit"]:hover {
+    background-position: 100% 0;
+    background-image: linear-gradient(to right,
+            #41447d,
+            #606284,
+            #41447d,
+            #606284);
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#form .container form .item {
+    margin-bottom: 24px;
+}
+
+#form .container form .item .box {
+    display: flex;
+    align-items: center;
+}
+
+#form .container form .item .box .one {
+    width: fit-content;
+    margin-right: 28px;
+}
+
+#form .container form .item .box .one label {
+    font-size: 16px;
+    color: #111;
+}
+
+#form .container form .item .box .one input {
+    padding: 0;
+    box-shadow: none;
+    height: 20px;
+    width: 20px;
+}
+
 /*external-pages-style-end-here  */
 
 /* media-screen */
@@ -2239,6 +2449,14 @@ footer .copy-text p span {
 
     main .enroll h1 {
         font-size: 34px;
+    }
+
+    #form .container {
+        width: 60%;
+    }
+
+    #developers ul {
+        width: 80%;
     }
 }
 
@@ -2414,6 +2632,18 @@ footer .copy-text p span {
     #teachers .profiles li:nth-child(4) {
         margin-top: 24px;
     }
+
+    #form .container {
+        width: 70%;
+    }
+
+    #developers ul {
+        width: 100%;
+    }
+
+    #developers ul li {
+        width: 25%;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -2563,6 +2793,10 @@ footer .copy-text p span {
     #portfolio .staff ul li h5 {
         font-size: 14px;
     }
+
+    #form .container {
+        width: 80%;
+    }
 }
 
 @media all and (max-width: 640px) {
@@ -2690,6 +2924,10 @@ footer .copy-text p span {
         margin-right: 0;
     }
 
+    #spotlight p {
+        width: 100%;
+    }
+
     #portfolio .container {
         height: 130px;
     }
@@ -2720,6 +2958,28 @@ footer .copy-text p span {
 
     #gallery ul li:nth-child(6) {
         margin-right: 0;
+    }
+
+    #form .container {
+        width: 100%;
+        padding: 30px 30px;
+    }
+
+    #form .container form label,
+    #form .container form input {
+        font-size: 16px;
+    }
+
+    #form .head h2 {
+        font-size: 20px;
+    }
+
+    #form .head h4 {
+        font-size: 16px;
+    }
+
+    #developers ul li {
+        width: 30%;
     }
 }
 
@@ -3126,6 +3386,36 @@ footer .copy-text p span {
     #gallery ul li {
         width: 40%;
     }
+
+    #form .head h2 {
+        font-size: 18px;
+    }
+
+    #form .head h4 {
+        font-size: 14px;
+    }
+
+    #developers ul li {
+        width: 40%;
+    }
+
+    #developers ul li .avatar {
+        width: 90px;
+    }
+
+    #developers ul li .info h3 {
+        font-size: 16px;
+    }
+
+    #developers ul li .info a.button {
+        padding: 10px 14px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    #developers .head h2 {
+        font-size: 24px;
+    }
 }
 
 @media all and (max-width: 360px) {
@@ -3286,16 +3576,16 @@ footer .copy-text p span {
 }
 
 #sports .content ul li {
-    width: 85%;
-    margin-right: 0;
+    /* width: 85%; */
+    /* margin-right: 0; */
 }
 
 #sports .content ul li:nth-child(n + 2) {
-    margin-top: 24px;
+    /* margin-top: 24px; */
 }
 
 #sports .content ul li:nth-child(3n) {
-    margin-right: 0;
+    /* margin-right: 0; */
 }
 
 #portfolio {
