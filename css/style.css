@@ -1719,26 +1719,30 @@ main .scroll-top:hover {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 70%;
+    /* width: 70%; */
     margin: 0 auto;
+    margin-right: 12px;
 }
 
 #developers ul li {
-    width: 20%;
+    width: 22%;
     text-align: center;
     margin-right: 20px;
     margin-bottom: 60px;
     cursor: pointer;
+    padding: 20px 0px;
+    border-radius: 10px;
+    transition: .4s ease;
+}
+#developers ul li:nth-child(4) {
+    margin-right: 0px;
 }
 
 #developers ul li .avatar {
     width: 100px;
     margin: 0 auto;
     margin-bottom: 20px;
-
-
 }
-
 #developers ul li .avatar img {
     width: 100%;
     display: block;
@@ -1748,7 +1752,6 @@ main .scroll-top:hover {
     border: 1px solid var(--prime-blue);
     border-right: 1px dashed var(--prime-blue);
 }
-
 #developers ul li .info h3 {
     color: #111;
     text-transform: capitalize;
@@ -1772,12 +1775,9 @@ main .scroll-top:hover {
     display: inline-block;
     transition: .4s ease;
 }
-
 #developers ul li .info a.button:hover {
     background: #033970;
-
 }
-
 #developers ul li .info a.button i {
     margin-right: 8px;
 }
