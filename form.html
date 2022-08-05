@@ -127,7 +127,7 @@
                     </div>
                     <div class="item">
                         <label for="gender">Gender</label>
-                        <select name="gender" placeholder="Gender" required id="course" required>
+                        <select name="gender" placeholder="Gender" required required id="gender">
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">other</option>
@@ -235,14 +235,30 @@
             var fname = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var id = document.getElementById('id').value;
-            pdf.setFontSize(22);
-            pdf.text(28, 30, "JNE Arts College");
-            pdf.text(28, 30, "Registration Form");
-            pdf.text(28, 30, "Name :" + fname);
-            pdf.text(28, 30, "Name" + email);
-            pdf.text(28, 30, "Name" + id);
+            var course = document.getElementById('course').value;
+            var dob = document.getElementById('dob').value;
+            var gender = document.getElementById('gender').value;
+            var snumber = document.getElementById('snumber').value;
+            var name_father = document.getElementById('name-father').value;
+            var name_mother = document.getElementById('name-mother').value;
+            var number_parent = document.getElementById('number-parent').value;
+            var institution = document.getElementById('institution').value;
+            var passout = document.getElementById('passout').value;
+            pdf.text(36, 30, "JNE Arts College");
+            pdf.text(30, 60, "Registration Form");
+            pdf.text(28, 90, "Name : " + fname);
+            pdf.text(28, 120, "Email : " + email);
+            pdf.text(28, 150, "CAP ID : " + id);
+            pdf.text(28, 180, "Course Selected : " + course);
+            pdf.text(28, 210, "Date of Birth : " + dob);
+            pdf.text(28, 240, "Gender : " + gender);
+            pdf.text(28, 270, "Student Mobile Number : " + snumber);
+            pdf.text(28, 300, "Name of Father : " + name_father);
+            pdf.text(28, 330, "Name of Mother : " + name_mother);
+            pdf.text(28, 360, "Number of parent : " + number_parent);
+            pdf.text(28, 390, "Institution last attended : " + institution);
+            pdf.text(28, 420, "Year and month of passout : " + passout);
             pdf.fromHTML(document.body);
-
             pdf.save('registration-form.pdf');
         });
 
