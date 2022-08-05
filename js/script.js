@@ -1,7 +1,6 @@
 var loader = document.getElementById("loader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
-  this.document.body.style.overflow = "visible";
 });
 
 // smooth-scrolling
@@ -144,7 +143,5 @@ $(document).ready(function () {
       button: "Ok",
     });
   });
- 
-  
 });
 AOS.init();

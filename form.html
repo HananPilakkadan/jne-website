@@ -37,6 +37,7 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/multi-animated-counter.js"></script>
+    <script src="./js/jspdf.min.js"></script>
     <script src="./js/script.js" defer></script>
     <!-- favicon -->
     <link rel="icon" sizes="16x16" href="./images/jamia logo.png" type=”image/png” />
@@ -47,7 +48,7 @@
     <header class="alter">
         <div class="wrapper">
             <h1 class="logo">
-                <a href="#"><img src="./images/jamia logo.png" alt="Logo" /></a>
+                <a href="index.html"><img src="./images/jamia logo.png" alt="Logo" /></a>
             </h1>
             <ul class="menu alter">
                 <li class="active"><a href="index.html">Home</a></li>
@@ -95,14 +96,16 @@
             </div>
             <div class="container">
                 <form method="get" action="">
-                   
+
                     <div class="item">
                         <label for="fullname">Full Name </label>
-                        <input type="text" placeholder="Enter Full Name" required id="name" name="fullname" value="test">
+                        <input type="text" placeholder="Enter Full Name" required id="name" name="fullname"
+                            value="test">
                     </div>
                     <div class="item">
                         <label for="email">E-Mail </label>
-                        <input type="email" placeholder="Enter e-mail" required id="email" name="email" value="test@example.com">
+                        <input type="email" placeholder="Enter e-mail" required id="email" name="email"
+                            value="test@example.com">
                     </div>
                     <div class="item">
                         <label for="id">CAP ID</label>
@@ -120,7 +123,7 @@
                     </div>
                     <div class="item">
                         <label for="dob">Date Of Birth</label>
-                        <input type="date" placeholder="date of birth" id="dob" name="dob" required value="01/01/2001">
+                        <input type="date" placeholder="date of birth" id="dob" name="dob" required value="2001/01/01">
                     </div>
                     <div class="item">
                         <label for="gender">Gender</label>
@@ -132,32 +135,38 @@
                     </div>
                     <div class="item">
                         <label for="snumber">Mobile Number Of Student</label>
-                        <input type="tel" placeholder="Mobile Number" id="snumber" name="snumber" required value="9877654332">
+                        <input type="tel" placeholder="Mobile Number" id="snumber" name="snumber" required
+                            value="9877654332">
                     </div>
                     <div class="item">
                         <label for="name-father">Name of Father</label>
-                        <input type="text" placeholder="Name of Father" id="name-father" name="name-father" required value="test">
+                        <input type="text" placeholder="Name of Father" id="name-father" name="name-father" required
+                            value="test">
                     </div>
                     <div class="item">
                         <label for="name-mother">Name of Mother</label>
-                        <input type="text" placeholder="name of Mother" id="name-mother" name="name-mother" required value="test">
+                        <input type="text" placeholder="name of Mother" id="name-mother" name="name-mother" required
+                            value="test">
                     </div>
                     <div class="item">
                         <label for="number-parent">Number of Parent</label>
-                        <input type="text" placeholder="Mobile Number" id="number-parent" name="number-parent" required value="998765532">
+                        <input type="text" placeholder="Mobile Number" id="number-parent" name="number-parent" required
+                            value="998765532">
                     </div>
                     <div class="item">
                         <label for="institution">Institution last attended</label>
-                        <input type="text" placeholder="Institution last attended" id="institution" name="institution" required value="test">
+                        <input type="text" placeholder="Institution last attended" id="institution" name="institution"
+                            required value="test">
                     </div>
                     <div class="item">
                         <label for="passout">Month and Year Of Passing</label>
-                        <input type="text" placeholder="Month and Year Of Passing" id="passout" name="passout" required value="test">
+                        <input type="text" placeholder="Month and Year Of Passing" id="passout" name="passout" required
+                            value="test">
                     </div>
-                        
-                        <input class="submit" type="submit" value="Submit">
 
-                    
+                    <input class="submit" type="submit" value="Submit" id="button-submit">
+
+
                 </form>
             </div>
         </div>
@@ -219,6 +228,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        $("#button-submit").on('click', function () {
+            var pdf = new jsPDF('p', 'pt', 'a4', true);
+            var fname = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var id = document.getElementById('id').value;
+            pdf.setFontSize(22);
+            pdf.text(28, 30, "JNE Arts College");
+            pdf.text(28, 30, "Registration Form");
+            pdf.text(28, 30, "Name :" + fname);
+            pdf.text(28, 30, "Name" + email);
+            pdf.text(28, 30, "Name" + id);
+            pdf.fromHTML(document.body);
+
+            pdf.save('registration-form.pdf');
+        });
+
+    </script>
 </body>
 
 </html>
