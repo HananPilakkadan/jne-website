@@ -144,5 +144,7 @@ $(document).ready(function () {
       button: "Ok",
     });
   });
+ 
+  
 });
 AOS.init();

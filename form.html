@@ -1,4 +1,4 @@
-f<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -94,18 +94,19 @@ f<!DOCTYPE html>
                 <h4>APPLICATION FORM FOR ADMISSION TO DEGREE/ PG COURSE</h4>
             </div>
             <div class="container">
-                <form action="">
+                <form method="get" action="">
+                   
                     <div class="item">
-                        <label for="name">Full Name </label>
-                        <input type="text" placeholder="Enter Full Name" required id="name">
+                        <label for="fullname">Full Name </label>
+                        <input type="text" placeholder="Enter Full Name" required id="name" name="fullname" value="test">
                     </div>
                     <div class="item">
                         <label for="email">E-Mail </label>
-                        <input type="email" placeholder="Enter e-mail" required id="email">
+                        <input type="email" placeholder="Enter e-mail" required id="email" name="email" value="test@example.com">
                     </div>
                     <div class="item">
                         <label for="id">CAP ID</label>
-                        <input type="text" placeholder="Enter CAP ID" id="id" required>
+                        <input type="text" placeholder="Enter CAP ID" id="id" required name="id" value="djka98738947">
                     </div>
                     <div class="item">
                         <label for="course">Select Courses</label>
@@ -119,7 +120,7 @@ f<!DOCTYPE html>
                     </div>
                     <div class="item">
                         <label for="dob">Date Of Birth</label>
-                        <input type="date" placeholder="date of birth" id="dob" required>
+                        <input type="date" placeholder="date of birth" id="dob" name="dob" required value="01/01/2001">
                     </div>
                     <div class="item">
                         <label for="gender">Gender</label>
@@ -131,30 +132,32 @@ f<!DOCTYPE html>
                     </div>
                     <div class="item">
                         <label for="snumber">Mobile Number Of Student</label>
-                        <input type="tel" placeholder="Mobile Number" id="snumber" required>
+                        <input type="tel" placeholder="Mobile Number" id="snumber" name="snumber" required value="9877654332">
                     </div>
                     <div class="item">
-                        <label for="name-father">Name of Fathe</label>
-                        <input type="text" placeholder="Name of Father" id="name-father" required>
+                        <label for="name-father">Name of Father</label>
+                        <input type="text" placeholder="Name of Father" id="name-father" name="name-father" required value="test">
                     </div>
                     <div class="item">
                         <label for="name-mother">Name of Mother</label>
-                        <input type="text" placeholder="name of Mother" id="name-mother" required>
+                        <input type="text" placeholder="name of Mother" id="name-mother" name="name-mother" required value="test">
                     </div>
                     <div class="item">
                         <label for="number-parent">Number of Parent</label>
-                        <input type="text" placeholder="Mobile Number" id="number-parent" required>
+                        <input type="text" placeholder="Mobile Number" id="number-parent" name="number-parent" required value="998765532">
                     </div>
                     <div class="item">
                         <label for="institution">Institution last attended</label>
-                        <input type="text" placeholder="Institution last attended" id="institution" required>
+                        <input type="text" placeholder="Institution last attended" id="institution" name="institution" required value="test">
                     </div>
                     <div class="item">
                         <label for="passout">Month and Year Of Passing</label>
-                        <input type="text" placeholder="Month and Year Of Passing" id="passout" required>
+                        <input type="text" placeholder="Month and Year Of Passing" id="passout" name="passout" required value="test">
                     </div>
+                        
+                        <input class="submit" type="submit" value="Submit">
 
-                    <input type="submit" value="Submit">
+                    
                 </form>
             </div>
         </div>
