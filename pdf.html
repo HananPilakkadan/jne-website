@@ -40,12 +40,14 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
     <script src="./js/jquery-min.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/multi-animated-counter.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/script.js" defer></script>
     <!-- favicon -->
     <link rel="icon" sizes="16x16" href="./images/jamia logo.png"
@@ -155,5 +157,15 @@
         </div>
       </div>
     </section>
+    <script>
+      window.addEventListener("load", function () {
+        Swal.fire({
+          icon: "success",
+          text: "Thank you for choosing JNE",
+          title: "(CTRL+P) for download your application.",
+          timer: 5000,
+        });
+      });
+    </script>
   </body>
 </html>
