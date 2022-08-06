@@ -95,19 +95,20 @@
                 <h4>APPLICATION FORM FOR ADMISSION TO DEGREE/ PG COURSE</h4>
             </div>
             <div class="container" id="container">
-                <form method="get" action="">
+                <form method="get" action="pdf.html">
 
                     <div class="item">
                         <label for="fullname">Full Name </label>
-                        <input type="text" placeholder="Enter Full Name" required id="name" name="fullname">
+                        <input type="text" placeholder="Enter Full Name" required id="name" name="fullname" value="20">
                     </div>
                     <div class="item">
                         <label for="email">E-Mail </label>
-                        <input type="email" placeholder="Enter e-mail" required id="email" name="email">
+                        <input type="email" placeholder="Enter e-mail" required id="email" name="email"
+                            value="example@example.com">
                     </div>
                     <div class="item">
                         <label for="id">CAP ID</label>
-                        <input type="text" placeholder="Enter CAP ID" id="id" required name="id">
+                        <input type="text" placeholder="Enter CAP ID" id="id" required name="id" value="20">
                     </div>
                     <div class="item">
                         <label for="course">Select Courses</label>
@@ -117,6 +118,8 @@
                             <option value="BCOM">BCOM</option>
                             <option value="BA-English">BA-English</option>
                             <option value="BSC-Physics">BSC-Physics</option>
+                            <option value="Mcom">M.com</option>
+                            <option value="Msc-Physics">M.sc-Physics</option>
                         </select>
                     </div>
                     <div class="item">
@@ -133,31 +136,45 @@
                     </div>
                     <div class="item">
                         <label for="snumber">Mobile Number Of Student</label>
-                        <input type="tel" placeholder="Mobile Number" id="snumber" name="snumber" required>
+                        <input type="tel" placeholder="Mobile Number" id="snumber" name="snumber" required value="20"
+                            maxlength="10">
                     </div>
                     <div class="item">
                         <label for="name-father">Name of Father</label>
-                        <input type="text" placeholder="Name of Father" id="name-father" name="name-father" required>
+                        <input type="text" placeholder="Name of Father" id="name-father" name="name-father" required
+                            value="20">
                     </div>
                     <div class="item">
                         <label for="name-mother">Name of Mother</label>
-                        <input type="text" placeholder="name of Mother" id="name-mother" name="name-mother" required>
+                        <input type="text" placeholder="name of Mother" id="name-mother" name="name-mother" required
+                            value="20">
                     </div>
                     <div class="item">
-                        <label for="number-parent">Number of Parent</label>
-                        <input type="text" placeholder="Mobile Number" id="number-parent" name="number-parent" required>
+                        <label for="number-parent">Contact Number of Parent</label>
+                        <input type="text" placeholder="Mobile Number" id="number-parent" name="number-parent" required
+                            value="20" maxlength="10">
                     </div>
                     <div class="item">
                         <label for="institution">Institution last attended</label>
                         <input type="text" placeholder="Institution last attended" id="institution" name="institution"
-                            required>
+                            value="20" required>
                     </div>
                     <div class="item">
                         <label for="passout">Month and Year Of Passing</label>
-                        <input type="text" placeholder="Month and Year Of Passing" id="passout" name="passout" required>
+                        <input type="text" placeholder="Month and Year Of Passing" id="passout" name="passout" required
+                            value="20" maxlength="4">
+                    </div>
+                    <div class="item">
+                        <label for="course">Course Selected for Plus Two</label>
+                        <input type="text" placeholder="eg: science" id="mark" name="passout" required value="20" />
+                    </div>
+                    <div class="item">
+                        <label for="passout">Percentage obtained</label>
+                        <input type="text" placeholder="Percentage obtained" id="mark" name="passout" required
+                            value="20" maxlength="4">
                     </div>
 
-                    <input class="submit" type="submit" value="Submit" id="button-submit">
+                    <input class="submit" type="submit" value="Submit" id="button-submit" onclick="formHandle()">
 
 
                 </form>
@@ -224,43 +241,46 @@
 
     <script>
 
-        $("#button-submit").on('click', function () {
-            var pdf = new jsPDF('p', 'pt', 'a4', true);
-            var fname = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var id = document.getElementById('id').value;
-            var course = document.getElementById('course').value;
-            var dob = document.getElementById('dob').value;
-            var gender = document.getElementById('gender').value;
-            var snumber = document.getElementById('snumber').value;
-            var name_father = document.getElementById('name-father').value;
-            var name_mother = document.getElementById('name-mother').value;
-            var number_parent = document.getElementById('number-parent').value;
-            var institution = document.getElementById('institution').value;
-            var passout = document.getElementById('passout').value;
-            pdf.setFontSize(24);
-            pdf.text(220, 30, "JNE Arts College");
-            pdf.text(215, 70, "Registration Form");
-            pdf.text(35, 140, "Name : " + fname);
-            pdf.text(35, 180, "Email : " + email);
-            pdf.text(35, 220, "CAP ID : " + id);
-            pdf.text(35, 260, "Course Selected : " + course);
-            pdf.text(35, 300, "Date of Birth : " + dob);
-            pdf.text(35, 340, "Gender : " + gender);
-            pdf.text(35, 380, "Student Mobile Number : " + snumber);
-            pdf.text(35, 420, "Name of Father : " + name_father);
-            pdf.text(35, 460, "Name of Mother : " + name_mother);
-            pdf.text(35, 500, "Number of parent : " + number_parent);
-            pdf.text(35, 540, "Institution last attended : " + institution);
-            pdf.text(35, 580, "Year and month of passout : " + passout);
-            pdf.fromHTML(document.body);
-            if (fname && email && id && course && dob && gender && snumber && name_father && name_mother && number_parent && institution && passout) {
-                pdf.save('registration-form.pdf');
-            }
-            else {
-                alert("Please fill the form");
-            }
-        });
+        // $("#button-submit").on('click', function () {
+        //     var pdf = new jsPDF('p', 'pt', 'a4', true);
+        //     var fname = document.getElementById('name').value;
+        //     var email = document.getElementById('email').value;
+        //     var id = document.getElementById('id').value;
+        //     var course = document.getElementById('course').value;
+        //     var dob = document.getElementById('dob').value;
+        //     var gender = document.getElementById('gender').value;
+        //     var snumber = document.getElementById('snumber').value;
+        //     var name_father = document.getElementById('name-father').value;
+        //     var name_mother = document.getElementById('name-mother').value;
+        //     var number_parent = document.getElementById('number-parent').value;
+        //     var institution = document.getElementById('institution').value;
+        //     var passout = document.getElementById('passout').value;
+        //     var plustwo = document.getElementById('plustwo').value;
+        //     pdf.setFontSize(24);
+        //     pdf.text(220, 30, "JNE Arts College");
+        //     pdf.text(215, 70, "Registration Form");
+        //     pdf.text(35, 140, "Name : " + fname);
+        //     pdf.text(35, 180, "Email : " + email);
+        //     pdf.text(35, 220, "CAP ID : " + id);
+        //     pdf.text(35, 260, "Course Selected : " + course);
+        //     pdf.text(35, 300, "Date of Birth : " + dob);
+        //     pdf.text(35, 340, "Gender : " + gender);
+        //     pdf.text(35, 380, "Student Mobile Number : " + snumber);
+        //     pdf.text(35, 420, "Name of Father : " + name_father);
+        //     pdf.text(35, 460, "Name of Mother : " + name_mother);
+        //     pdf.text(35, 500, "Number of parent : " + number_parent);
+        //     pdf.text(35, 540, "Institution last attended : " + institution);
+        //     pdf.text(35, 580, "Year and month of passout : " + passout);
+        //     pdf.text(35, 620, "Course Selected for Plus Two : " + passout);
+        //     pdf.fromHTML(document.body);
+        //     if (fname && email && id && course && dob && gender && snumber && name_father && name_mother && number_parent && institution && passout) {
+        //         pdf.save('registration-form.pdf');
+        //     }
+        //     else {
+        //         alert("Please fill the form");
+        //     }
+        // });
+
 
     </script>
 </body>

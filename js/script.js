@@ -145,3 +145,26 @@ $(document).ready(function () {
   });
 });
 AOS.init();
+const formHandle = (e) => {
+  e.preventDefault();
+  const params1 = new URLSearchParams(window.location.search);
+  // let value = [params1.getAll("name"), params1.get("email")];
+  let value = params1.get("fullname");
+  var url = window.location.href;
+  console.log(value);
+  console.log(url);
+  var queryparams = url.split("?")[1];
+
+  var params = queryparams.split("&");
+  console.log(params);
+  // var pair = null,
+  //   data = [];
+
+  // params.forEach(function (d) {
+  //   pair = d.split("=");
+  //   data.push({ key: pair[0], value: pair[1] });
+  // });
+  let fullname = document.getElementById("names");
+  console.log(fullname);
+  fullname.innerHTML += `<td>hello</td>`;
+};

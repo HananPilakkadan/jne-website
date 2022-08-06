@@ -2444,6 +2444,141 @@ footer .copy-text p span {
     width: 20px;
 }
 
+#registration {
+    font-family: 'Times New Roman';
+    padding: 10px 0;
+
+}
+
+#registration .head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#registration .head h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#registration .head p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+
+#registration .head h4 {
+    font-size: 20px;
+}
+
+#registration .course {
+    display: flex;
+    margin-bottom: 26px;
+}
+
+#registration .course label {
+    font-size: 20px;
+}
+
+#registration .course input {
+    border-bottom: 2px dotted #000;
+    width: 80%;
+    margin-left: 10px;
+}
+
+#registration table {
+    width: 100%;
+    border: 1px solid #000;
+    margin-top: 8px;
+
+}
+
+
+#registration table td {
+    border: 1px solid #000;
+    padding: 10px 10px;
+    width: 50%;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+
+}
+
+#registration table td#info {
+    width: 50%;
+}
+
+#registration .info {
+    margin-top: 20px;
+}
+
+#registration .info p {
+    font-size: 20px;
+}
+
+#registration .info .row {
+    margin-bottom: 40px;
+}
+
+#registration .info .sign {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#registration .office .head {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+#registration .office .head h5 {
+    font-size: 18px;
+}
+
+#registration .office h2 {
+    font-size: 16px;
+}
+
+#registration .office .admit {
+    display: flex;
+    align-items: baseline;
+    margin-top: 8px;
+}
+
+#registration .office .admit p {
+    width: 90%;
+    margin-left: 8px;
+    border-bottom: 2px dotted #000;
+}
+
+#registration .application {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+#registration .application h3 {
+    font-size: 16px;
+}
+
+#registration .application h3.detials {
+    font-size: 16px;
+}
+
+#registration .div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+#registration .div p {
+    font-size: 16px;
+}
+
 /*external-pages-style-end-here  */
 
 /* media-screen */
