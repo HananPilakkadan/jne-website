@@ -135,36 +135,79 @@ $(document).ready(function () {
       },
     ],
   });
-  $("#button-submit").click(function () {
-    swal({
-      title: "Thank You",
-      text: "Your Message Is Received",
-      icon: "success",
-      button: "Ok",
-    });
-  });
 });
 AOS.init();
-const formHandle = (e) => {
-  e.preventDefault();
-  const params1 = new URLSearchParams(window.location.search);
-  // let value = [params1.getAll("name"), params1.get("email")];
-  let value = params1.get("fullname");
-  var url = window.location.href;
-  console.log(value);
-  console.log(url);
-  var queryparams = url.split("?")[1];
 
-  var params = queryparams.split("&");
-  console.log(params);
-  // var pair = null,
-  //   data = [];
+function formHandle() {
 
-  // params.forEach(function (d) {
-  //   pair = d.split("=");
-  //   data.push({ key: pair[0], value: pair[1] });
-  // });
-  let fullname = document.getElementById("names");
-  console.log(fullname);
-  fullname.innerHTML += `<td>hello</td>`;
-};
+  let fullName = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let id = document.getElementById("id").value;
+  let course = document.getElementById("course").value;
+  let dob = document.getElementById("dob").value;
+  let gender = document.getElementById("gender").value;
+  let sNumber = document.getElementById("snumber").value;
+  let nameFather = document.getElementById("name-father").value;
+  let nameMother = document.getElementById("name-mother").value;
+  let pNumber = document.getElementById("number-parent").value;
+  let institution = document.getElementById("institution").value;
+  let passOut = document.getElementById("passout").value;
+  let plus = document.getElementById("mark").value;
+  let percentage = document.getElementById("percentage").value;
+
+  if ((fullName && email && id && course && dob && gender && sNumber && nameFather && nameMother && pNumber && institution && passOut && plus && percentage) === "") {
+    Swal.fire({
+      icon: "error",
+      text: "All field is required",
+      title: "Try again",
+      timer: 2500,
+    })
+    return false;
+  }
+}
+
+
+const params = new URLSearchParams(window.location.search);
+let course = params.get("course");
+let fullName = params.get("fullname");
+let id = params.get("id");
+let dob = params.get("dob");
+let gender = params.get("gender");
+let email = params.get("email");
+let number = params.get("snumber");
+let father = params.get("name-father");
+let mother = params.get("name-mother");
+let parent = params.get("number-parent");
+let institution = params.get("institution");
+let passout = params.get("passout");
+let percentage = params.get("percentage");
+
+let courseTr = document.getElementById("info-course");
+let fullNameTr = document.getElementById("info-name");
+let idTr = document.getElementById("info-id");
+let dobTr = document.getElementById("info-dob");
+let genderTr = document.getElementById("info-gender");
+let emailTr = document.getElementById("info-email");
+let sNumberTr = document.getElementById("info-snumber");
+let fatherTr = document.getElementById("info-father");
+let motherTr = document.getElementById("info-mother");
+let numberTr = document.getElementById("info-pnumber");
+let institutionTr = document.getElementById("info-institution");
+let passTr = document.getElementById("info-pass");
+let percentageTr = document.getElementById("info-percentage");
+
+courseTr.value = course;
+fullNameTr.innerHTML = fullName;
+idTr.innerHTML = id;
+dobTr.innerHTML = dob;
+genderTr.innerHTML = gender;
+emailTr.innerHTML = email;
+sNumberTr.innerHTML = number;
+fatherTr.innerHTML = father;
+motherTr.innerHTML = mother;
+numberTr.innerHTML = parent;
+institutionTr.innerHTML = institution;
+passTr.innerHTML = passout;
+percentageTr.innerHTML = percentage;
+
+
