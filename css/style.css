@@ -10,7 +10,6 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
@@ -2367,6 +2366,13 @@ footer .copy-text p span {
     background: #fafafa;
     border: 2px solid transparent;
     transition: .3s ease;
+    text-transform: capitalize;
+}
+#form .container form input[type="email"] {
+    text-transform: lowercase;
+}
+#form .container form input#id {
+    text-transform: uppercase;
 }
 
 #form .container form input:active,
@@ -2493,7 +2499,7 @@ footer .copy-text p span {
     width: 100%;
     border: 1px solid #000;
     margin-top: 8px;
-
+    
 }
 
 
@@ -2505,11 +2511,18 @@ footer .copy-text p span {
     display: inline-block;
     white-space: nowrap;
     font-size: 14px;
-
+    text-transform: capitalize;
+}
+#registration table td#info-id {
+    text-transform: uppercase;
+}
+#registration table td#info-email {
+    text-transform: lowercase;
 }
 
 #registration table td#info {
     width: 50%;
+
 }
 
 #registration .info {

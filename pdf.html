@@ -48,13 +48,14 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/multi-animated-counter.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js" defer></script>
     <!-- favicon -->
     <link rel="icon" sizes="16x16" href="./images/jamia logo.png"
     type=”image/png” />
   </head>
 
-  <body>
+  <body id="body">
     <section id="registration">
       <div class="wrapper">
         <div class="box">
@@ -86,11 +87,11 @@
                   <td id="info-dob">DATE OF BIRTH</td>
                 </tr>
                 <tr>
-                  <td>Gender</td>
+                  <td>GENDER</td>
                   <td id="info-gender">Male</td>
                 </tr>
                 <tr>
-                  <td>Email</td>
+                  <td>EMAIL</td>
                   <td id="info-email">Male</td>
                 </tr>
                 <tr>
@@ -162,9 +163,12 @@
         Swal.fire({
           icon: "success",
           text: "Thank you for choosing JNE",
-          title: "(CTRL+P) for download your application.",
+          title: "Your application is ready.",
           timer: 5000,
-        });
+        }).then(() => {
+            var element = document.getElementById('body');
+            html2pdf().from(element).save('ApplicationForm.pdf');
+        })
       });
     </script>
   </body>
