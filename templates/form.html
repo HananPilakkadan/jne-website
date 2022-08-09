@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNE - Enquiry Form</title>
+    <meta name="keywords" content="jne, Jamia Nadwiyya, jamianadwiyyaartscollege, jne arts college, jne arts college edavanna,
+         edavanna, jamia edavanna, jamiaedavanna, jamia edavanna, jnasc edavanna, 
+         jneartscollege, jamia nadwiyya arts college, jamia nadwiyya arts college edavanna" />
+    <meta name="description" content="In an era , when Muslim community along with other marginalized
+          backward communities continued to exist in illiteracy and ignorance
+          , Jamia Nadwiyya laid its foundation in 1964 by Kerala  Nadvathul
+          Mujahideen (KNM) a socio- cultural – educational renaissance
+          movement in Kerala ." />
+    <meta property="og:description" content="In an era , when Muslim community along with other marginalized
+          backward communities continued to exist in illiteracy and ignorance
+          , Jamia Nadwiyya laid its foundation in 1964 by Kerala  Nadvathul
+          Mujahideen (KNM) a socio- cultural – educational renaissance
+          movement in Kerala ." />
+    <meta property="og:title" content="JNE Arts College" />
+    <meta property="og:image" sizes="16x16" content={% static "images/og-icon.png" %} type=”image/png” />
+
+    <!-- links -->
+    <link rel="stylesheet" href={% static "css/style.css" %} />
+    <link rel="stylesheet" href={% static "css/all.css" %} />
+    <link rel="stylesheet" href={% static "css/aos.css" %}>
+    <link rel="stylesheet" href={% static "css/slick-theme.css" %} />
+    <link rel="stylesheet" href={% static "css/slick.css" %} />
+    <link rel="stylesheet" href={% static "css/owl.carousel.min.css" %} />
+    <link rel="stylesheet" href={% static "css/owl.theme.default.min.css" %} />
+    <link rel="stylesheet" href={% static "css/swiper-bundle.min.css" %} />
+    <link rel="stylesheet" href={% static "css/sweetalert2.min.css" %}>
+    <script src={% static "js/jquery-min.js"%}></script>
+    <script src={% static "js/aos.js"%}></script>
+    <script src={% static "js/slick.min.js"%}></script>
+    <script src={% static "js/owl.carousel.min.js"%}></script>
+    <script src={% static "js/swiper-bundle.min.js"%}></script>
+    <script src={% static "js/multi-animated-counter.js"%}></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src={% static "js/script.js"%} defer></script>
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href={% static "images/jamia logo.png"%} type=”image/png” />
+</head>
+<body>
+    <header class="alter">
+        <div class="wrapper">
+            <h1 class="logo">
+                <a href="index.html"><img src={% static "images/jamia logo.png"%} alt="Logo" /></a>
+            </h1>
+            <ul class="menu alter">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#news">News</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+
+            <!-- mobile-menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="index.html#footer">Contact</a></li>
+                </ul>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="form">
+        <div class="wrapper">
+            <div class="head">
+                <h2>JNE Arts College</h2>
+                <h4>APPLICATION FORM FOR ADMISSION TO DEGREE/ PG COURSE</h4>
+            </div>
+            <div class="container" id="container">
+                <form method="post" action={% url 'web:form' %} >
+                    {% csrf_token %}
+                    <div class="item">
+                        <label for="fullname">Full Name </label>
+                        <input type="text" placeholder="Enter Full Name" required  id="name" name="full_name"  />
+                    </div>
+                    <div class="item">
+                        <label for="email">E-Mail </label>
+                        <input type="email" placeholder="Enter e-mail" required id="email" name="email" />
+                    </div>
+                    <div class="item">
+                        <label for="id">CAP ID</label>
+                        <input type="text" placeholder="Enter CAP ID" id="id" required name="cap_id"  />
+                    </div>
+                    <div class="item">
+                        <label for="course">Select Courses</label>
+                        <select name="selected_course" placeholder="Course" required id="course" required>
+                            <option value="BBA">BBA</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BCOM">BCOM</option>
+                            <option value="BA-English">BA-English</option>
+                            <option value="BSC-Physics">BSC-Physics</option>
+                            <option value="Mcom">M.com</option>
+                            <option value="Msc-Physics">M.sc-Physics</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="dob">Date Of Birth</label>
+                        <input type="date" placeholder="date of birth" id="dob" name="dob" required />
+                    </div>
+                    <div class="item">
+                        <label for="gender">Gender</label>
+                        <select name="gender" placeholder="Gender" required required id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="snumber">Mobile Number Of Student</label>
+                        <input type="tel"  placeholder="Mobile Number" id="snumber" name="snumber" required 
+                            maxlength="10" />
+                    </div>
+                    <div class="item">
+                        <label for="name-father">Name of Father</label>
+                        <input type="text" placeholder="Name of Father" id="name-father" name="father_name" required
+                             />
+                    </div>
+                    <div class="item">
+                        <label for="name-mother">Name of Mother</label>
+                        <input type="text" placeholder="name of Mother" id="name-mother" name="mother_name" required
+                             />
+                    </div>
+                    <div class="item">
+                        <label for="number-parent">Contact Number of Parent</label>
+                        <input type="tel"  placeholder="Mobile Number" id="number-parent" name="parent_contact" required
+                             maxlength="10">
+                    </div>
+                    <div class="item">
+                        <label for="institution">Institution last attended</label>
+                        <input type="text" placeholder="Institution last attended" id="institution" name="institution"
+                             required />
+                    </div>
+                    <div class="item">
+                        <label for="passout">Month and Year Of Passing</label>
+                        <input type="tel"  placeholder="Month and Year Of Passing" id="passout" name="passout" required />
+                    </div>
+                    <div class="item">
+                        <label for="course">Course Selected for Plus Two</label>
+                        <input type="text" placeholder="eg: science" id="mark" name="course_plustwo" required  />
+                    </div>
+                    <div class="item">
+                        <label for="percentage">Percentage obtained</label>
+                        <input type="text" placeholder="Percentage obtained" id="percentage" name="percentage_obtained" required
+                             maxlength="4" />
+                    </div>
+                    <input class="submit" type="submit" value="Submit" id="button-submit" onclick=formHandle() />
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="top-container">
+                <div class="logo">
+                    <h1>
+                        <a href="#home"><img src={% static "images/jamia logo.png"%} alt="Logo" /></a>
+                    </h1>
+                </div>
+                <div class="address-box">
+                    <div class="phone contact-item">
+                        <a href="tel:04832704771">
+                            <span><img src={% static "images/phone-icon.png"%} alt="Phone"></span></a>
+                        <a href="tel:04832704771">
+                            <h4>0483 270 4771</h4>
+                        </a>
+                        </a>
+                    </div>
+                    <div class="location contact-item">
+                        <a href="https://goo.gl/maps/UvzzwmxHhgevra1q6 ">
+                            <span><img src={% static "images/map-icon.png"%} alt="Map"></span></a>
+                        <a href="https://goo.gl/maps/UvzzwmxHhgevra1q6 ">
+                            <h4>
+                                Chempakuthu -Chalipadam-Kunduthodu Rd, Chembakuth, Edavanna,
+                                Kerala 676123
+                            </h4>
+                        </a>
+                        </a>
+                    </div>
+                    <div class="mail contact-item">
+                        <a href="#">
+                            <span><img src={% static "images/mail-icon.png"%} alt="Mail"></span></a>
+                        <a href="">
+                            <h4>hello@jamia.com</h4>
+                        </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <ul class="social-icons">
+                <li>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+            <div class="copy-text">
+                <p>
+                    &copy; All Right Reserved | Design And Developed By <span>BCA (2020 -
+                        2023).</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
